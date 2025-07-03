@@ -63,7 +63,7 @@ foreach($_SESSION['carrinho'] as $id => $qtd) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Carrinho - Chocolates Delícia</title>
+    <title>Carrinho - Chocolícia</title>
     <link rel="stylesheet" href="style.css">
     <style>
         .carrinho-container {

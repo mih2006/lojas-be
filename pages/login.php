@@ -63,7 +63,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login - Chocolates Delícia</title>
+    <title>Login - Chocolícia</title>
     <link rel="stylesheet" href="style.css">
     <style>
         .login-container {
@@ -142,7 +142,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <div class="login-container">
-        <h1>Chocolicia</h1>
+        <h1>Chocolícia</h1>
         
         <?php if($erro): ?>
             <div class="erro-login"><?= $erro ?></div>
