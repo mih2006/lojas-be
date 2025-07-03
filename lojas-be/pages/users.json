@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "usuario": "cliente@email.com",
+      "senha": "222"
+    },
+    {
+      "id": 2,
+      "usuario": "admin@chocolates.com",
+      "senha": "444"
+    }
+  ]
+}
