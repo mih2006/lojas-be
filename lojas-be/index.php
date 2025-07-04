@@ -1,27 +1,27 @@
 <?php
 session_start();
 
-// Produtos em destaque de exemplo
+// Produtos em destaque de exemplo - caminhos corrigidos
 $produtosDestaque = [
     [
         'id' => 1,
         'nome' => 'Trufas de Chocolate Belga',
         'preco' => 24.90,
-        'img' => 'trufas.png',
+        'img' => 'pages/images/trufa.png', // Caminho completo corrigido
         'descricao' => 'Trufas artesanais feitas com chocolate belga de primeira qualidade'
     ],
     [
         'id' => 2,
         'nome' => 'Barra 70% Cacau',
         'preco' => 18.50,
-        'img' => 'cacau.png',
+        'img' => 'pages/images/cacau.png', // Caminho completo corrigido
         'descricao' => 'Barra de chocolate amargo com 70% de cacau puro'
     ],
     [
         'id' => 3,
         'nome' => 'Caixa de Bombons Sortidos',
         'preco' => 45.00,
-        'img' => 'bombons.jpg',
+        'img' => 'pages/images/bombom.png', // Caminho completo corrigido
         'descricao' => 'Seleção premium de 12 bombons com recheios especiais'
     ]
 ];
@@ -30,7 +30,7 @@ $produtosDestaque = [
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Chocolícia - Home</title>
+    <title>𝓒𝓱𝓸𝓬𝓸𝓵í𝓬𝓲𝓪 - Home</title>
     <link rel="stylesheet" href="style.css">
     <style>
         :root {
@@ -251,12 +251,12 @@ $produtosDestaque = [
                 align-items: center;
             }
         }
-    </style>
+        </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <h1>CHOCOLÍCIA</h1>
+            <h1>C𝓒𝓱𝓸𝓬𝓸𝓵í𝓬𝓲𝓪</h1>
         </div>
         <nav>
             <?php if(isset($_SESSION['usuario'])): ?>
@@ -282,8 +282,9 @@ $produtosDestaque = [
         <div class="produtos-container">
             <?php foreach($produtosDestaque as $produto): ?>
                 <div class="produto">
-                    <img src="images/<?= $produto['img'] ?>" alt="<?= $produto['nome'] ?>" 
-                         onerror="this.onerror=null; this.src='https://via.placeholder.com/280x200/5d4037/ffffff?text=Chocolícia'">
+                    <!-- Caminho corrigido e fallback melhorado -->
+                    <img src="<?= $produto['img'] ?>" alt="<?= $produto['nome'] ?>" 
+                         onerror="this.onerror=null; this.src='https://via.placeholder.com/280x200/5d4037/ffffff?text=<?= urlencode(substr($produto['nome'], 0, 20)) ?>'">
                     <h3><?= $produto['nome'] ?></h3>
                     <p><?= $produto['descricao'] ?></p>
                     <p class="preco">R$ <?= number_format($produto['preco'], 2, ',', '.') ?></p>
@@ -292,6 +293,7 @@ $produtosDestaque = [
             <?php endforeach; ?>
         </div>
     </section>
+
 
     <section class="sobre">
         <div class="sobre-container">
@@ -303,7 +305,7 @@ $produtosDestaque = [
     </section>
 
     <footer>
-        <p>Chocolícia &copy; <?= date('Y') ?></p>
+        <p>𝓒𝓱𝓸𝓬𝓸𝓵í𝓬𝓲𝓪 &copy; <?= date('Y') ?></p>
     </footer>
 </body>
 </html>
