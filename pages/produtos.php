@@ -18,7 +18,7 @@ $produtos = [
         'id' => 1,
         'nome' => 'Trufas de Chocolate Belga',
         'preco' => 24.90,
-        'img' => 'trufas.png',
+        'img' => 'trufa.png',
         'categoria' => 'finos'
     ],
     [
@@ -32,21 +32,21 @@ $produtos = [
         'id' => 3,
         'nome' => 'Caixa de Bombons Sortidos',
         'preco' => 45.00,
-        'img' => 'bombons.jpg',
+        'img' => 'bombom.png',
         'categoria' => 'finos'
     ],
     [
         'id' => 4,
         'nome' => 'Ovo de Páscoa Recheado',
         'preco' => 89.90,
-        'img' => 'ovo-pascoa.jpg',
+        'img' => 'ovo.png',
         'categoria' => 'finos'
     ],
     [
         'id' => 5,
         'nome' => 'Chocolate com Amêndoas',
         'preco' => 32.75,
-        'img' => 'amendoas.jpg',
+        'img' => 'amendoas.png',
         'categoria' => 'finos'
     ],
     [
