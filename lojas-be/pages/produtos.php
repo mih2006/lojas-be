@@ -53,49 +53,49 @@ $produtos = [
         'id' => 6,
         'nome' => 'Fondue de Chocolate',
         'preco' => 65.00,
-        'img' => 'fondue.jpg',
+        'img' => 'fondue.png',
         'categoria' => 'finos'
     ],
     [
         'id' => 7,
         'nome' => 'Barrinha de Chocolate Branco',
         'preco' => 12.90,
-        'img' => 'branco.jpg',
+        'img' => 'branco.png',
         'categoria' => 'especiais'
     ],
     [
         'id' => 8,
         'nome' => 'Kit Presente Chocolícia',
         'preco' => 120.00,
-        'img' => 'kit-presente.jpg',
+        'img' => 'kit.png',
         'categoria' => 'especiais'
     ],
     [
         'id' => 9,
-        'nome' => 'Chocolate com Pimenta',
+        'nome' => 'Café com chocolate',
         'preco' => 28.50,
-        'img' => 'pimenta.jpg',
+        'img' => 'cafe.png',
         'categoria' => 'especiais'
     ],
     [
         'id' => 10,
         'nome' => 'Cupcake de Chocolate',
         'preco' => 15.00,
-        'img' => 'cupcake.jpg',
+        'img' => 'cupcake.png',
         'categoria' => 'especiais'
     ],
     [
         'id' => 11,
         'nome' => 'Chocolate Vegano',
         'preco' => 22.90,
-        'img' => 'vegano.jpg',
+        'img' => 'vegano.png',
         'categoria' => 'especiais'
     ],
     [
         'id' => 12,
         'nome' => 'Tablete de Chocolate com Café',
         'preco' => 19.75,
-        'img' => 'cafe.jpg',
+        'img' => 'tablete.png',
         'categoria' => 'especiais'
     ]
 ];
@@ -287,57 +287,57 @@ function getImagemProduto($img) {
 <body>
     <header>
         <div class="logo">
-            <h1>CHOCOLÍCIA</h1>
+            <h1>𝓒𝓱𝓸𝓬𝓸𝓵í𝓬𝓲𝓪</h1>
         </div>
         <nav>
             <?php if(isset($_SESSION['usuario'])): ?>
                 <span>Olá, <?= $_SESSION['usuario'] ?></span> |
-                <a href="../index.php">Home</a> |
-                <a href="produtos.php">Produtos</a> |
-                <a href="carrinho.php">Carrinho</a> |
-                <a href="../?sair=1">Sair</a>
+                <a href="../index.php">𝐇𝐨𝐦𝐞</a> |
+                <a href="produtos.php">𝐏𝐫𝐨𝐝𝐮𝐭𝐨𝐬</a> |
+                <a href="carrinho.php">𝐂𝐚𝐫𝐫𝐢𝐧𝐡𝐨</a> |
+                <a href="../?sair=1">𝐒𝐚𝐢𝐫</a>
             <?php else: ?>
-                <a href="login.php">Login</a> |
-                <a href="produtos.php">Produtos</a>
+                <a href="login.php">𝐋𝐨𝐠𝐢𝐧</a> |
+                <a href="produtos.php">𝐏𝐫𝐨𝐝𝐮𝐭𝐨𝐬</a>
             <?php endif; ?>
         </nav>
     </header>
     
     <main>
-        <h2 class="title-font">Nossos Deliciosos Chocolates</h2>
+        <h2 class="title-font">𝐍𝐨𝐬𝐬𝐨𝐬 𝐃𝐞𝐥𝐢𝐜𝐢𝐨𝐬𝐨𝐬 𝐂𝐡𝐨𝐜𝐨𝐥𝐚𝐭𝐞𝐬</h2>
         
         <div class="produtos-container">
-            <h3 class="categoria-titulo">Chocolates Finos</h3>
+            <h3 class="categoria-titulo">𝐂𝐡𝐨𝐜𝐨𝐥𝐚𝐭𝐞𝐬 𝐅𝐢𝐧𝐨𝐬</h3>
             <?php foreach(array_filter($produtos, function($p) { return $p['categoria'] === 'finos'; }) as $produto): ?>
                 <div class="produto">
                     <?php if(file_exists('images/' . $produto['img'])): ?>
                         <img src="images/<?= $produto['img'] ?>" alt="<?= $produto['nome'] ?>">
                     <?php else: ?>
-                        <div class="sem-imagem">Imagem não disponível</div>
+                        <div class="sem-imagem">𝐈𝐦𝐚𝐠𝐞𝐦 𝐧ã𝐨 𝐝𝐢𝐬𝐩𝐨𝐧í𝐯𝐞𝐥</div>
                     <?php endif; ?>
                     <div class="produto-info">
                         <h3><?= $produto['nome'] ?></h3>
                         <p class="preco">R$ <?= number_format($produto['preco'], 2, ',', '.') ?></p>
                         <button class="btn" onclick="adicionarCarrinho(<?= $produto['id'] ?>)">
-                            Adicionar ao Carrinho
+                        𝐀𝐝𝐢𝐜𝐢𝐨𝐧𝐚𝐫 𝐚𝐨 𝐂𝐚𝐫𝐫𝐢𝐧𝐡𝐨
                         </button>
                     </div>
                 </div>
             <?php endforeach; ?>
             
-            <h3 class="categoria-titulo">Chocolates Especiais</h3>
+            <h3 class="categoria-titulo">𝐂𝐡𝐨𝐜𝐨𝐥𝐚𝐭𝐞𝐬 𝐄𝐬𝐩𝐞𝐜𝐢𝐚𝐢𝐬</h3>
             <?php foreach(array_filter($produtos, function($p) { return $p['categoria'] === 'especiais'; }) as $produto): ?>
                 <div class="produto">
                     <?php if(file_exists('images/' . $produto['img'])): ?>
                         <img src="images/<?= $produto['img'] ?>" alt="<?= $produto['nome'] ?>">
                     <?php else: ?>
-                        <div class="sem-imagem">Imagem não disponível</div>
+                        <div class="sem-imagem">𝐈𝐦𝐚𝐠𝐞𝐦 𝐧ã𝐨 𝐝𝐢𝐬𝐩𝐨𝐧í𝐯𝐞𝐥</div>
                     <?php endif; ?>
                     <div class="produto-info">
                         <h3><?= $produto['nome'] ?></h3>
                         <p class="preco">R$ <?= number_format($produto['preco'], 2, ',', '.') ?></p>
                         <button class="btn" onclick="adicionarCarrinho(<?= $produto['id'] ?>)">
-                            Adicionar ao Carrinho
+                        𝐀𝐝𝐢𝐜𝐢𝐨𝐧𝐚𝐫 𝐚𝐨 𝐂𝐚𝐫𝐫𝐢𝐧𝐡𝐨
                         </button>
                     </div>
                 </div>
@@ -346,7 +346,7 @@ function getImagemProduto($img) {
     </main>
     
     <footer>
-        <p>Chocolícia &copy; <?= date('Y') ?></p>
+        <p>𝓒𝓱𝓸𝓬𝓸𝓵í𝓬𝓲𝓪 &copy; <?= date('Y') ?></p>
     </footer>
 
     <script>

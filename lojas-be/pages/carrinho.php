@@ -63,7 +63,7 @@ foreach($_SESSION['carrinho'] as $id => $qtd) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Carrinho - Chocolícia</title>
+    <title>𝐂𝐚𝐫𝐫𝐢𝐧𝐡𝐨 - 𝐂𝐡𝐨𝐜𝐨𝐥í𝐜𝐢𝐚</title>
     <link rel="stylesheet" href="style.css">
     <style>
         .carrinho-container {
@@ -187,7 +187,7 @@ foreach($_SESSION['carrinho'] as $id => $qtd) {
     <?php include 'header.php'; ?>
     
     <div class="carrinho-container">
-        <h1>Seu Carrinho</h1>
+        <h1>𝐒𝐞𝐮 𝐂𝐚𝐫𝐫𝐢𝐧𝐡𝐨</h1>
         
         <?php if(empty($_SESSION['carrinho'])): ?>
             <div class="carrinho-vazio">
@@ -221,7 +221,7 @@ foreach($_SESSION['carrinho'] as $id => $qtd) {
                     </div>
                     
                     <button type="submit" class="btn-atualizar">Atualizar Carrinho</button>
-<button type="button" class="btn-finalizar" onclick="location.href='produtos.php'">Finalizar Compra</button>
+                <button type="button" class="btn-finalizar" onclick="location.href='produtos.php'">Finalizar Compra</button>
                     <a href="produtos.php" class="btn-continuar">Continuar comprando</a>
                 </div>
             </form>

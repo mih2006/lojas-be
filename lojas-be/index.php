@@ -30,7 +30,7 @@ $produtosDestaque = [
 <!DOCTYPE html>
 <html>
 <head>
-    <title>𝓒𝓱𝓸𝓬𝓸𝓵í𝓬𝓲𝓪 - Home</title>
+    <title>𝓒𝓱𝓸𝓬𝓸𝓵í𝓬𝓲𝓪 - 𝐇𝐨𝐦𝐞</title>
     <link rel="stylesheet" href="style.css">
     <style>
         :root {
@@ -256,29 +256,29 @@ $produtosDestaque = [
 <body>
     <header>
         <div class="logo">
-            <h1>C𝓒𝓱𝓸𝓬𝓸𝓵í𝓬𝓲𝓪</h1>
+            <h1>𝓒𝓱𝓸𝓬𝓸𝓵í𝓬𝓲𝓪</h1>
         </div>
         <nav>
             <?php if(isset($_SESSION['usuario'])): ?>
                 <span>Olá, <?= $_SESSION['usuario'] ?></span> |
-                <a href="pages/produtos.php">Produtos</a> |
-                <a href="pages/carrinho.php">Carrinho</a> |
-                <a href="?sair=1">Sair</a>
+                <a href="pages/produtos.php">𝐏𝐫𝐨𝐝𝐮𝐭𝐨𝐬</a> |
+                <a href="pages/carrinho.php">𝐂𝐚𝐫𝐫𝐢𝐧𝐡𝐨</a> |
+                <a href="?sair=1">𝐒𝐚𝐢𝐫</a>
             <?php else: ?>
                 <a href="pages/login.php">Login</a> |
-                <a href="pages/produtos.php">Produtos</a>
+                <a href="pages/produtos.php">𝐏𝐫𝐨𝐝𝐮𝐭𝐨𝐬</a>
             <?php endif; ?>
         </nav>
     </header>
 
     <section class="hero-banner">
-        <h2>Os melhores chocolates artesanais</h2>
-        <p>Feitos com amor e ingredientes selecionados para os verdadeiros amantes de chocolate</p>
-        <a href="pages/produtos.php" class="btn">Conheça nossos produtos</a>
+        <h2>𝐎𝐬 𝐦𝐞𝐥𝐡𝐨𝐫𝐞𝐬 𝐜𝐡𝐨𝐜𝐨𝐥𝐚𝐭𝐞𝐬 𝐚𝐫𝐭𝐞𝐬𝐚𝐧𝐚𝐢𝐬</h2>
+        <p>𝐅𝐞𝐢𝐭𝐨𝐬 𝐜𝐨𝐦 𝐚𝐦𝐨𝐫 𝐞 𝐢𝐧𝐠𝐫𝐞𝐝𝐢𝐞𝐧𝐭𝐞𝐬 𝐬𝐞𝐥𝐞𝐜𝐢𝐨𝐧𝐚𝐝𝐨𝐬 𝐩𝐚𝐫𝐚 𝐨𝐬 𝐯𝐞𝐫𝐝𝐚𝐝𝐞𝐢𝐫𝐨𝐬 𝐚𝐦𝐚𝐧𝐭𝐞𝐬 𝐝𝐞 𝐜𝐡𝐨𝐜𝐨𝐥𝐚𝐭𝐞</p>
+        <a href="pages/produtos.php" class="btn">𝐂𝐨𝐧𝐡𝐞ç𝐚 𝐧𝐨𝐬𝐬𝐨𝐬 𝐩𝐫𝐨𝐝𝐮𝐭𝐨𝐬</a>
     </section>
 
     <section class="destaques">
-        <h2>Nossos Destaques</h2>
+        <h2>𝐍𝐨𝐬𝐬𝐨𝐬 𝐃𝐞𝐬𝐭𝐚𝐪𝐮𝐞𝐬</h2>
         <div class="produtos-container">
             <?php foreach($produtosDestaque as $produto): ?>
                 <div class="produto">
@@ -288,7 +288,7 @@ $produtosDestaque = [
                     <h3><?= $produto['nome'] ?></h3>
                     <p><?= $produto['descricao'] ?></p>
                     <p class="preco">R$ <?= number_format($produto['preco'], 2, ',', '.') ?></p>
-                    <a href="pages/produtos.php" class="btn">Ver detalhes</a>
+                    <a href="pages/produtos.php" class="btn">𝐕𝐞𝐫 𝐝𝐞𝐭𝐚𝐥𝐡𝐞𝐬</a>
                 </div>
             <?php endforeach; ?>
         </div>
@@ -297,10 +297,10 @@ $produtosDestaque = [
 
     <section class="sobre">
         <div class="sobre-container">
-            <h2>Sobre a Chocolícia</h2>
-            <p>Desde 2010, a Chocolícia vem encantando paladares com seus chocolates artesanais feitos com os melhores ingredientes e muito carinho. Nossa missão é levar alegria e momentos especiais através do sabor inigualável do verdadeiro chocolate.</p>
-            <p>Todos os nossos produtos são fabricados artesanalmente, sem conservantes e com ingredientes 100% naturais.</p>
-            <a href="pages/produtos.php" class="btn">Nossa Coleção</a>
+            <h2>𝐒𝐨𝐛𝐫𝐞 𝐚 𝐂𝐡𝐨𝐜𝐨𝐥í𝐜𝐢𝐚</h2>
+            <p>𝐃𝐞𝐬𝐝𝐞 𝟐𝟎𝟏𝟎, 𝐚 𝐂𝐡𝐨𝐜𝐨𝐥í𝐜𝐢𝐚 𝐯𝐞𝐦 𝐞𝐧𝐜𝐚𝐧𝐭𝐚𝐧𝐝𝐨 𝐩𝐚𝐥𝐚𝐝𝐚𝐫𝐞𝐬 𝐜𝐨𝐦 𝐬𝐞𝐮𝐬 𝐜𝐡𝐨𝐜𝐨𝐥𝐚𝐭𝐞𝐬 𝐚𝐫𝐭𝐞𝐬𝐚𝐧𝐚𝐢𝐬 𝐟𝐞𝐢𝐭𝐨𝐬 𝐜𝐨𝐦 𝐨𝐬 𝐦𝐞𝐥𝐡𝐨𝐫𝐞𝐬 𝐢𝐧𝐠𝐫𝐞𝐝𝐢𝐞𝐧𝐭𝐞𝐬 𝐞 𝐦𝐮𝐢𝐭𝐨 𝐜𝐚𝐫𝐢𝐧𝐡𝐨. 𝐍𝐨𝐬𝐬𝐚 𝐦𝐢𝐬𝐬ã𝐨 é 𝐥𝐞𝐯𝐚𝐫 𝐚𝐥𝐞𝐠𝐫𝐢𝐚 𝐞 𝐦𝐨𝐦𝐞𝐧𝐭𝐨𝐬 𝐞𝐬𝐩𝐞𝐜𝐢𝐚𝐢𝐬 𝐚𝐭𝐫𝐚𝐯é𝐬 𝐝𝐨 𝐬𝐚𝐛𝐨𝐫 𝐢𝐧𝐢𝐠𝐮𝐚𝐥á𝐯𝐞𝐥 𝐝𝐨 𝐯𝐞𝐫𝐝𝐚𝐝𝐞𝐢𝐫𝐨 𝐜𝐡𝐨𝐜𝐨𝐥𝐚𝐭𝐞.</p>
+            <p>𝐓𝐨𝐝𝐨𝐬 𝐨𝐬 𝐧𝐨𝐬𝐬𝐨𝐬 𝐩𝐫𝐨𝐝𝐮𝐭𝐨𝐬 𝐬ã𝐨 𝐟𝐚𝐛𝐫𝐢𝐜𝐚𝐝𝐨𝐬 𝐚𝐫𝐭𝐞𝐬𝐚𝐧𝐚𝐥𝐦𝐞𝐧𝐭𝐞, 𝐬𝐞𝐦 𝐜𝐨𝐧𝐬𝐞𝐫𝐯𝐚𝐧𝐭𝐞𝐬 𝐞 𝐜𝐨𝐦 𝐢𝐧𝐠𝐫𝐞𝐝𝐢𝐞𝐧𝐭𝐞𝐬 𝟏𝟎𝟎% 𝐧𝐚𝐭𝐮𝐫𝐚𝐢𝐬.</p>
+            <a href="pages/produtos.php" class="btn">𝐍𝐨𝐬𝐬𝐚 𝐂𝐨𝐥𝐞çã𝐨</a>
         </div>
     </section>
 
