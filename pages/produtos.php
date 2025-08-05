@@ -12,21 +12,6 @@ if(!isset($_SESSION['usuario'])) {
     exit;
 }
 
-// Adiciona item ao carrinho
-if(isset($_GET['adicionar'])) {
-    $id = (int)$_GET['adicionar'];
-    
-    // Verifica se o produto já está no carrinho
-    if(isset($_SESSION['carrinho'][$id])) {
-        $_SESSION['carrinho'][$id] += 1;
-    } else {
-        $_SESSION['carrinho'][$id] = 1;
-    }
-    
-    header("Location: produtos.php?added=$id");
-    exit;
-}
-
 // Lista de produtos da Chocolícia
 $produtos = [
     [
@@ -296,21 +281,6 @@ function getImagemProduto($img) {
             font-weight: bold;
             height: 180px;
             border-radius: 10px;
-            .mensagem-sucesso {
-            background-color: #d4edda;
-            color: #155724;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            text-align: center;
-            animation: fadeOut 3s forwards;
-            animation-delay: 2s;
-        }
-    }
-        
-        @keyframes fadeOut {
-            to { opacity: 0; height: 0; padding: 0; margin: 0; }
-
         }
     </style>
 </head>
