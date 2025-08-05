@@ -106,7 +106,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
             width: 100%;
             padding: 12px;
             background-color: var(--marrom);
-            color: white;
+            color: black;
             border: none;
             border-radius: 25px;
             font-size: 1.1rem;

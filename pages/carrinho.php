@@ -43,12 +43,18 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 // Simulação de produtos (em produção, use banco de dados)
 $produtos = [
-    1 => ['nome' => 'Trufas de Morango', 'preco' => 12.90, 'img' => 'trufa-morango.jpg'],
-    2 => ['nome' => 'Barra 70% Cacau', 'preco' => 24.90, 'img' => 'barra-cacau.jpg'],
-    3 => ['nome' => 'Bombons Sortidos', 'preco' => 35.90, 'img' => 'bombons.jpg'],
-    4 => ['nome' => 'Ovo de Páscoa', 'preco' => 89.90, 'img' => 'ovo-pascoa.jpg'],
-    5 => ['nome' => 'Chocolate Branco', 'preco' => 19.90, 'img' => 'branco.jpg'],
-    6 => ['nome' => 'Cupcake de Chocolate', 'preco' => 14.90, 'img' => 'cupcake.jpg']
+    1 => ['nome' => 'Trufas de Chocolate Belga', 'preco' => 24.90, 'img' => 'trufa.png'],
+    2 => ['nome' => 'Barra 70% Cacau', 'preco' => 18.50, 'img' => 'cacau.png'],
+    3 => ['nome' => 'Caixa de Bombons Sortidos', 'preco' => 45.00, 'img' => 'bombom.png'],
+    4 => ['nome' => 'Ovo de Páscoa Recheado', 'preco' => 89.90, 'img' => 'ovo.png'],
+    5 => ['nome' => 'Chocolate com Amêndoas', 'preco' => 32.75, 'img' => 'amendoas.png'],
+    6 => ['nome' => 'Fondue de Chocolate', 'preco' => 65.00, 'img' => 'fondue.png'],
+    7 => ['nome' => 'Barrinha de Chocolate Branco', 'preco' => 12.90, 'img' => 'branco.png'],
+    8 => ['nome' => 'Kit Presente Chocolícia', 'preco' => 120.00, 'img' => 'kit.png'],
+    9 => ['nome' => 'Café com chocolate', 'preco' => 28.50, 'img' => 'cafe.png'],
+    10 => ['nome' => 'Cupcake de Chocolate', 'preco' => 15.00, 'img' => 'cupcake.png'],
+    11 => ['nome' => 'Chocolate Vegano', 'preco' => 22.90, 'img' => 'vegano.png'],
+    12 => ['nome' => 'Tablete de Chocolate com Café', 'preco' => 19.75, 'img' => 'tablete.png']
 ];
 
 // Calcula total
@@ -63,7 +69,7 @@ foreach($_SESSION['carrinho'] as $id => $qtd) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Carrinho - Chocolícia</title>
+    <title>𝐂𝐚𝐫𝐫𝐢𝐧𝐡𝐨 - 𝐂𝐡𝐨𝐜𝐨𝐥í𝐜𝐢𝐚</title>
     <link rel="stylesheet" href="style.css">
     <style>
         .carrinho-container {
@@ -187,7 +193,7 @@ foreach($_SESSION['carrinho'] as $id => $qtd) {
     <?php include 'header.php'; ?>
     
     <div class="carrinho-container">
-        <h1>Seu Carrinho</h1>
+        <h1>𝐒𝐞𝐮 𝐂𝐚𝐫𝐫𝐢𝐧𝐡𝐨</h1>
         
         <?php if(empty($_SESSION['carrinho'])): ?>
             <div class="carrinho-vazio">
@@ -221,7 +227,7 @@ foreach($_SESSION['carrinho'] as $id => $qtd) {
                     </div>
                     
                     <button type="submit" class="btn-atualizar">Atualizar Carrinho</button>
-<button type="button" class="btn-finalizar" onclick="location.href='produtos.php'">Finalizar Compra</button>
+                <button type="button" class="btn-finalizar" onclick="location.href='produtos.php'">Finalizar Compra</button>
                     <a href="produtos.php" class="btn-continuar">Continuar comprando</a>
                 </div>
             </form>
